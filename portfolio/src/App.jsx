@@ -129,6 +129,14 @@ const skillGroups = [
     title: "Developer Tools",
     items: ["VS Code", "Visual Studio", "Postman", "Git", "Jira"],
   },
+  {
+    title: "AI Tools",
+    items: [
+      "GitHub Copilot",
+      "Claude AI",
+      "OpenAI Codex"
+    ],
+  },
 ];
 
 const projects = [
@@ -359,11 +367,10 @@ function App() {
                   <a
                     href={link.href}
                     onClick={() => handleNavClick(link.href)}
-                    className={`rounded-full px-3 py-2 transition duration-300 hover:text-cyan-300 ${
-                      activeSection === link.href.replace("#", "")
+                    className={`rounded-full px-3 py-2 transition duration-300 hover:text-cyan-300 ${activeSection === link.href.replace("#", "")
                         ? "bg-cyan-300/10 text-cyan-300"
                         : ""
-                    }`}
+                      }`}
                   >
                     {link.label}
                   </a>
@@ -390,11 +397,10 @@ function App() {
                       <button
                         key={option.value}
                         type="button"
-                        className={`flex w-full items-center gap-3 px-4 py-2 text-left transition duration-300 hover:bg-violet-400 hover:text-slate-950 ${
-                          theme === option.value
+                        className={`flex w-full items-center gap-3 px-4 py-2 text-left transition duration-300 hover:bg-violet-400 hover:text-slate-950 ${theme === option.value
                             ? "bg-violet-500 text-white"
                             : "text-slate-300"
-                        }`}
+                          }`}
                         onClick={() => changeTheme(option.value)}
                       >
                         <Icon />
@@ -424,11 +430,10 @@ function App() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className={`block rounded-lg px-3 py-2 transition duration-300 hover:text-cyan-300 ${
-                      activeSection === link.href.replace("#", "")
+                    className={`block rounded-lg px-3 py-2 transition duration-300 hover:text-cyan-300 ${activeSection === link.href.replace("#", "")
                         ? "bg-cyan-300/10 text-cyan-300"
                         : ""
-                    }`}
+                      }`}
                     onClick={() => handleNavClick(link.href)}
                   >
                     {link.label}
@@ -444,11 +449,10 @@ function App() {
                   <button
                     key={option.value}
                     type="button"
-                    className={`flex items-center justify-center gap-2 px-3 py-3 text-sm transition duration-300 ${
-                      theme === option.value
+                    className={`flex items-center justify-center gap-2 px-3 py-3 text-sm transition duration-300 ${theme === option.value
                         ? "bg-violet-500 text-white"
                         : "text-slate-300"
-                    }`}
+                      }`}
                     onClick={() => changeTheme(option.value)}
                   >
                     <Icon />
@@ -509,11 +513,26 @@ function App() {
                 transition={{ delay: 0.8 }}
                 className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-slate-300 lg:mx-0"
               >
-                Full Stack Developer with 2+ years of experience building
-                responsive React applications, secure Node.js APIs,
-                MongoDB-backed systems, realtime dashboards, and
-                cloud-integrated product features.
+                Full Stack Developer with 3+ years of experience designing and developing scalable web applications using React.js, Node.js, Express.js, and MongoDB. Experienced in building responsive user interfaces, secure REST APIs, real-time dashboards, authentication systems, and cloud-integrated product features.
               </motion.p>
+              <div className="mt-6 flex flex-wrap justify-center gap-3 lg:justify-start">
+                {[
+                  "React.js",
+                  "Node.js",
+                  "MongoDB",
+                  "TypeScript",
+                  "GitHub Copilot",
+                  "Claude AI",
+                  "OpenAI Codex",
+                ].map((item) => (
+                  <span
+                    key={item}
+                    className="rounded-full bg-cyan-300/10 px-4 py-2 text-sm font-medium text-cyan-200 ring-1 ring-cyan-300/20"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
 
               <div className="mt-10 flex flex-wrap justify-center gap-4 lg:justify-start">
                 <a
@@ -584,7 +603,7 @@ function App() {
                 About Me
               </p>
               <h2 className="text-4xl font-bold leading-tight md:text-5xl">
-                I build clean full-stack products from idea to working feature.
+                I build scalable, user-focused web applications with modern technologies.
               </h2>
             </motion.div>
 
@@ -596,21 +615,16 @@ function App() {
               className="border-l border-white/10 pl-0 lg:pl-10"
             >
               <p className="text-lg leading-9 text-slate-300">
-                I am a Full Stack Developer focused on React JS, Node JS,
-                Express JS, and MongoDB. My work includes secure REST APIs,
-                realtime dashboards, JWT authentication, Redux state management,
-                AWS S3 integrations, and responsive user interfaces.
+                I am a Full Stack Developer with 3+ years of experience building scalable web applications using React.js, Node.js, Express.js, and MongoDB. I have experience developing secure REST APIs, real-time dashboards, role-based authentication with JWT, Redux state management, AWS S3 integrations, and responsive, user-friendly interfaces.
               </p>
               <p className="mt-6 text-lg leading-9 text-slate-400">
-                I enjoy turning business requirements into reliable features,
-                improving application performance, and collaborating through
-                Agile workflows with clear communication and ownership.
+                I enjoy transforming business requirements into reliable, high-quality features, optimizing application performance, and collaborating with cross-functional teams in Agile environments to deliver scalable and maintainable solutions.
               </p>
 
               <div className="mt-9 grid gap-4 sm:grid-cols-3">
                 {[
-                  ["2+", "Years Experience"],
-                  ["4", "Major Projects"],
+                  ["3+", "Years Experience"],
+                  ["4+", "Production Projects"],
                   ["MERN", "Primary Stack"],
                 ].map(([value, label]) => (
                   <div
@@ -983,11 +997,10 @@ function App() {
               </button>
               {contactStatus && (
                 <p
-                  className={`text-sm font-medium ${
-                    contactStatusType === "success"
+                  className={`text-sm font-medium ${contactStatusType === "success"
                       ? "text-emerald-300"
                       : "text-amber-300"
-                  }`}
+                    }`}
                 >
                   {contactStatus}
                 </p>
