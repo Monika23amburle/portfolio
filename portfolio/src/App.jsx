@@ -520,7 +520,7 @@ function App() {
                   "React.js",
                   "Node.js",
                   "MongoDB",
-                  "TypeScript",
+                  "JavaScript",
                   "GitHub Copilot",
                   "Claude AI",
                   "OpenAI Codex",
